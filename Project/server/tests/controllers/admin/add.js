@@ -1,10 +1,9 @@
 const request = require("supertest");
-const app = require("../../../../app");
+
 const { STATUS_CODES } = require("http");
 
 const { AdminService } = require("../../../../services");
-const { Users } = require("../../../../models");
-const { mockUsers } = require("../../../../utils/mocks/Users");
+
 
 jest.mock("../../../../services/admin", () => ({
   setUserAdmin: jest.fn(),
